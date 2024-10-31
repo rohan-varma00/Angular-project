@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class WeatherDataService {
   private apiUrl = 'https://api.weatherapi.com/v1/current.json';
-  private apiKey = '67581a222b5841d7b4d50644242710';
+  private apiKey = '';//use your own apikey
 
   constructor(private http: HttpClient) {}
 
