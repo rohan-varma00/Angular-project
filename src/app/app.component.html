@@ -1,0 +1,18 @@
+<app-nav-bar></app-nav-bar>
+<div id="maindiv">
+    <div id="box">
+        <form #search (ngSubmit)="getWeather()">
+            <input id="inputbx" name="inpbx"  type="text" [(ngModel)]="city" placeholder="Enter city name"  />
+            <button id="search-button" name="searchbttn" #bbtn >search</button>
+        </form>
+        <div *ngIf="temp" id="information">
+            <h1 id="degrees"><img class="mainimage" src="/assets/water-temperature.png">{{ weatherData.current.temp_c }}°C</h1>
+            <div id="remaining">
+                <h3 class="sideimg"> <img src="/assets/humidity.png"> Humidity: {{weatherData.current.humidity}} %</h3>
+                <h3 class="sideimg"> <img src="/assets/wind.png"> Wind: {{weatherData.current.wind_kph}} KM/H</h3>
+                <h3 class="sideimg"> <img src="/assets/persomething.png"> Precipitation: {{weatherData.current.precip_in}}%</h3>
+                <h3 class="sideimg"> <img src="/assets/uv.png"> UV: {{weatherData.current.uv}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
